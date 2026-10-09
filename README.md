@@ -381,8 +381,5 @@ training.
 Open `notebooks/TakeMeter_TrueFilm.ipynb` in Google Colab, select a T4 GPU, add
 `GROQ_API_KEY` to Colab Secrets, and run the notebook from top to bottom.
 
-## Demo
 
-See `DEMO.md`.
-
-**Video link:** TODO — paste the final 3–5 minute demo link before submission.
+**Video link:** (https://drive.google.com/file/d/156CQVOOJhIZ-igWcW1pm9f-7hDzbVt3l/view?usp=sharing)
