@@ -1,0 +1,42 @@
+TakeMeter Dataset QC Report
+===========================
+
+Input dataset:
+225 automatically pre-labeled rows.
+
+QC actions:
+- Removed 10 low-value, meta, off-topic, or too-context-dependent rows.
+- Relabeled 61 rows whose automatic label did not match the project's primary-purpose decision rules.
+- Added 15 manually selected clear opinion examples from candidate_pool.csv because the original automatic labeling substantially overestimated the opinion class.
+- Final reviewed dataset: 225 rows.
+
+Final class distribution:
+- analysis: 96 (42.7%)
+- opinion: 43 (19.1%)
+- discussion_question: 86 (38.2%)
+
+Key finding:
+The original script's biggest error pattern was treating many question/recommendation posts as 'opinion' and treating long analytical posts containing question marks as 'discussion_question'. The corrected dataset applies the rule based on the post's PRIMARY PURPOSE rather than punctuation.
+
+Rows removed from the original labeled_data.csv:
+64, 106, 121, 126, 163, 168, 191, 201, 212, 214
+
+Five useful difficult cases for the README:
+
+1. Original row 76 -> analysis
+   The title is phrased as a question, but the body develops the author's own argument that the film critiques state violence. Primary purpose is interpretation, not merely soliciting answers.
+
+2. Original row 84 -> opinion
+   The post ends by asking whether others found variable frame rate distracting, but most of the text is the author's personal evaluation of the viewing experience.
+
+3. Original row 20 -> analysis
+   The author asks for feedback, but the main substance is a developed scene analysis using shot composition, POV, camera work, and animation choices.
+
+4. Original row 181 -> analysis
+   The post contains several questions, but they are rhetorical steps inside a developed interpretation of Bugonia rather than the main purpose of the post.
+
+5. Original row 194 -> discussion_question
+   The author offers their own evaluation of The Forgiven but ultimately asks the community for an analysis, making response-seeking the primary purpose.
+
+Recommended final manual check:
+Read a random 10 examples from each class before training. The dataset is now much cleaner, but subjective film-discourse labeling still benefits from a last human skim.

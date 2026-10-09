@@ -1,0 +1,34 @@
+TakeMeter / r/TrueFilm dataset
+================================
+
+Source:
+Arctic Shift public Reddit archive
+
+Subreddit:
+r/TrueFilm
+
+Final rows:
+225
+
+Label counts:
+analysis: 75
+opinion: 75
+discussion_question: 75
+
+Source types:
+posts: 172
+comments: 53
+
+Rows flagged for manual review:
+0
+
+Files created:
+- labeled_data.csv
+- review_queue.csv
+- candidate_pool.csv
+- dataset_summary.txt
+
+IMPORTANT:
+These are automated preliminary labels.
+Manually review the dataset before training.
+Keep at least 3 genuinely difficult examples for your README.
